@@ -12,7 +12,6 @@ Vagrant.configure("2") do |config|
       apt-get update
       apt-get install -y libc-ares2
       apt-get install -y nmap
-      wget https://github.com/FRRouting/frr/releases/download/frr-3.0.2/frr_3.0.2-1-ubuntu14.04.1_amd64.deb
       dpkg -i frr_3.0.2-1-ubuntu14.04.1_amd64.deb
       usermod -a -G frr vagrant
       chmod -R 775 /etc/frr/
@@ -36,7 +35,6 @@ Vagrant.configure("2") do |config|
       apt-get update
       apt-get install -y libc-ares2
       apt-get install -y nmap
-      wget https://github.com/FRRouting/frr/releases/download/frr-3.0.2/frr_3.0.2-1-ubuntu14.04.1_amd64.deb
       dpkg -i frr_3.0.2-1-ubuntu14.04.1_amd64.deb
       usermod -a -G frr vagrant
       chmod -R 775 /etc/frr/
