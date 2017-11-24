@@ -17,6 +17,7 @@ Vagrant.configure("2") do |config|
     config.vm.provision "shell", inline: <<-SHELL
       apt-get update
       apt-get install libc-ares2
+      wget https://github.com/FRRouting/frr/releases/download/frr-3.0.2/frr_3.0.2-1-ubuntu14.04.1_amd64.deb
       dpkg -i frr_3.0.2-1-ubuntu14.04.1_amd64.deb
     SHELL
   end
