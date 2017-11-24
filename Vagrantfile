@@ -12,9 +12,12 @@ Vagrant.configure("2") do |config|
     # frr_router1.vm.network "private_network", virtualbox__intnet: "swp2"
     # frr_router1.vm.network "private_network", virtualbox__intnet: "swp3"
     # frr_router1.vm.network "private_network", virtualbox__intnet: "swp4"
+    config.vm.provision "file", source: "frr_router_1_daemon", destination: "/etc/frr/daemon"
+    config.vm.provision "file", source: "frr_router_1_config", destination: "/etc/frr/bgpd.conf"
     config.vm.provision "shell", inline: <<-SHELL
       apt-get update
-      apt-get install -y frr
+      apt-get install libc-ares2
+      dpkg -i frr_3.0.2-1-ubuntu14.04.1_amd64.deb
     SHELL
   end
 
