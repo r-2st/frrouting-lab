@@ -1,0 +1,15 @@
+!
+! Zebra configuration saved from vty
+!   2017/11/24 03:29:57
+!
+frr version 3.0.2
+frr defaults traditional
+!
+hostname frr-bgp
+password zebra
+!
+!
+bgp config-type cisco
+!
+line vty
+!
