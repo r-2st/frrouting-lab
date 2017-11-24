@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
 
   config.vm.define "frr_router1" do |frr_router1|
-    frr_router1.vm.box = "cumuluscommunity/cumulus-vx"
+    frr_router1.vm.box = "ubuntu/trusty64"
     frr_router1.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", "512"]
       vb.customize ["modifyvm", :id, "--cpus", "1"]
